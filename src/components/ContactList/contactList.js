@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import styles from './style.module.css';
 import ContactItem from './ContactItem/contactItem';
 
-const ContactList = ({ getVisibleContacts, deleteContact }) => {
+const ContactList = ({ getVisibleContacts}) => {
   return (
     <div>
       <ul className={styles.contactsList}>
@@ -13,7 +13,7 @@ const ContactList = ({ getVisibleContacts, deleteContact }) => {
              id={id}
              name={name} 
              number={number}
-             deleteContact={deleteContact}/>
+             />
           );
         })}
       </ul>
@@ -29,7 +29,7 @@ ContactList.propTypes = {
       number: PropTypes.string.isRequired,
     })
   ),
-  deleteContact: PropTypes.func.isRequired,
+  //deleteContact: PropTypes.func.isRequired,
 };
 
 export default ContactList;
