@@ -17,7 +17,6 @@ const filter = useSelector(state => state.filter);
 //getting contacts
 const contacts = useSelector(state => state.contacts);
 
-
 //functions
 
 const handleFilter = () => {
