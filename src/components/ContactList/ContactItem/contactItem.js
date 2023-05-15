@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import styles from './style.module.css';
 
-// Импортируем хук
+// redux's hook import
 import { useDispatch } from "react-redux";
-// Импортируем генератор экшена
-//import { deleteContact } from 'redux/actions';
+
+//action import
 import { deleteContact } from 'redux/contactsSlice';
 
 const ContactItem = ({id, name, number}) => {
@@ -34,7 +34,6 @@ ContactItem.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     number: PropTypes.string.isRequired,
-    //deleteContact: PropTypes.func.isRequired,
 };
 
 export default ContactItem;

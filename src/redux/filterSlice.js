@@ -1,22 +1,21 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const filterInitialState = '';
 
 const filterSlice = createSlice({
-    // Имя слайса
-    name: "filter",
-    // Начальное состояние редюсера слайса
-    initialState: filterInitialState,
-    // Объект редюсеров
-    reducers: {
-      setContactsFilter(state, action) {
-          return action.payload;
-      },
+  // slice name
+  name: 'filter',
+  // initial state of reducer
+  initialState: filterInitialState,
+  // reducers
+  reducers: {
+    setContactsFilter(state, action) {
+      return action.payload;
     },
-  });
+  },
+});
 
-// Генераторы экшенов
-export const { setContactsFilter, } = filterSlice.actions;
-// Редюсер слайса
+// action generator
+export const { setContactsFilter } = filterSlice.actions;
+// slice's reducer
 export const filterReducer = filterSlice.reducer;
-  

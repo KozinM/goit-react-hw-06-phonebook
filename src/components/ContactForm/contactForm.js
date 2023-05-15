@@ -1,11 +1,10 @@
 import React, { useState} from 'react';
-//import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import styles from './style.module.css';
 
-//redux
+//redux's hooks import
 import { useDispatch, useSelector } from 'react-redux';
-//import { addContact } from 'redux/actions';
+//actions import
 import { addContact } from 'redux/contactsSlice';
 
 
