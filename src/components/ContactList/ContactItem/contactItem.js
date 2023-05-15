@@ -4,7 +4,8 @@ import styles from './style.module.css';
 // Импортируем хук
 import { useDispatch } from "react-redux";
 // Импортируем генератор экшена
-import { deleteContact } from 'redux/actions';
+//import { deleteContact } from 'redux/actions';
+import { deleteContact } from 'redux/contactsSlice';
 
 const ContactItem = ({id, name, number}) => {
 
