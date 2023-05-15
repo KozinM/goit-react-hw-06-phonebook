@@ -1,8 +1,11 @@
-import PropTypes from 'prop-types';
+
 import styles from './style.module.css';
 import ContactItem from './ContactItem/contactItem';
+import { useSelector } from 'react-redux';
+import { selectFilteredContacts } from 'redux/selectors';
 
-const ContactList = ({ getVisibleContacts}) => {
+const ContactList = () => {
+  const getVisibleContacts = useSelector(selectFilteredContacts);
   return (
     <div>
       <ul className={styles.contactsList}>
@@ -19,16 +22,6 @@ const ContactList = ({ getVisibleContacts}) => {
       </ul>
     </div>
   );
-};
-
-ContactList.propTypes = {
-  getVisibleContacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    })
-  ),
 };
 
 export default ContactList;

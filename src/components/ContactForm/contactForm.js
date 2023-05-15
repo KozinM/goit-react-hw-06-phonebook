@@ -6,6 +6,7 @@ import styles from './style.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 //actions import
 import { addContact } from 'redux/contactsSlice';
+import { selectContacts } from 'redux/selectors';
 
 
 export const ContactForm = () => {
@@ -24,7 +25,7 @@ const handleChangeNumber = event => {
   setNumber(event.currentTarget.value);
 };
 
-const contacts = useSelector(state=> state.contacts);
+const contacts = useSelector(selectContacts);
 
 const isContactExist = contacts.find(
   contact => contact.name.toLowerCase() === name.toLowerCase()
@@ -41,7 +42,6 @@ const handleSubmit = event => {
     name,
     number,
   };
-  console.log(data);
   dispatch(addContact(data));
   resetForm();
 };
